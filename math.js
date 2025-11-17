@@ -15,8 +15,13 @@ function diff(num1,num2){
 
  prod(2,3);
 function prod(num1,num2){
+
+    if (num1 ===0){
+        console.log("cannot divide by zero");
+    }else{
     prod= num1 * num2;
       console.log(prod);
+}
 }
 
 quotient(2,3);
