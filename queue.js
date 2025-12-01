@@ -32,6 +32,15 @@ class Queue{
     size(){
         return this.rearIndex - this.frontIndex +1;
     }
+
+    dequeue(){
+        if(this.is_empty()) return null;
+       
+        const value = this.data[this.frontIndex];
+        delete this.data[this.frontIndex];
+        this.frontIndex++;
+        return value;
+    }
 }
 
 let queue1 = new Queue();
@@ -40,3 +49,7 @@ queue1.enqueue(2);
 queue1.enqueue(3);
 queue1.traverse();
 
+
+console.log(queue1.traverse());
+console.log("the front value " + queue1.dequeue() + " is dequeue");
+console.log(queue1.traverse());
